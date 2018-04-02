@@ -126,7 +126,7 @@ nav {
 }
 #search-bar {
 	width: 100%;
-	background-color: #333;
+	background-color: transparent;
 	color: var(--main-yellow-color);
 	border: 1px solid var(--main-yellow-color);
 	border-radius: 3px;
@@ -138,8 +138,8 @@ nav {
 #search-bar:focus {
 	outline: none !important;
 }
-#search-btn {
-	background-color: #333;
+#search-icon {
+	background-color: transparent;
 	padding: 8px 10px 5px;
 	color: #F1C40F;
 	font-size: 1.5rem;
@@ -149,10 +149,8 @@ nav {
 	top: 50%;
 	left: 1px;
 	transform:translateY(-50%);
-	z-index: 0;
+	z-index: -1;
 }
-
-
 #close-search-btn {
 	width: 45px;
 	height: 45px;
@@ -248,7 +246,7 @@ nav {
 	line-height: 45px;
 	padding: 3px 10px 0;
 }
-.hamburger {
+#hamburger-menu {
 	position: absolute;
 	top: 50%;
 	right: 0;
@@ -258,8 +256,8 @@ nav {
 	background-color: var(--main-yellow-color);
 	border-radius: 10px;
 }
-.hamburger:before,
-.hamburger:after {
+#hamburger-menu:before,
+#hamburger-menu:after {
 	content: "";
 	position: absolute;
 	width: 40px;
@@ -268,20 +266,20 @@ nav {
 	border-radius: 10px;
 	transition: 0.4s;
 }
-.hamburger:before {
+#hamburger-menu:before {
 	top: -10px;
 }
-.hamburger:after {
+#hamburger-menu:after {
 	top: 10px;
 }
-#icon.active .hamburger:before {
+#icon.active #hamburger-menu:before {
 	top: 0;
 	transform: rotate(45deg);
 }
-#icon.active .hamburger {
+#icon.active #hamburger-menu {
 	background-color: rgba(0,0,0,0);
 }
-#icon.active .hamburger:after {
+#icon.active #hamburger-menu:after {
 	top: 0;
 	transform: rotate(135deg);
 }
@@ -750,6 +748,9 @@ input[type="radio"] {
 /*--- END OF ABOVE ---*/
 
 /*--- Practice btn ---*/
+#practice-btns-outer {
+	padding: 0 30px;
+}
 #practice-btns-container {
 	width: 65%;
 	margin: auto;
@@ -776,15 +777,20 @@ input[type="radio"] {
 	outline: none;
 }
 /*--- Start of Conversion Section ---*/
+	#conversion-outer {
+		padding: 0 15px;
+	}
   #conversion-container {
     position: relative;
     width: 550px;
     height: auto;
     margin: 20px auto 0;
     padding: 10px;
+		border: 2px solid var(--main-black-color);
     border-radius: 4px;
-    background-color: #333;
+    background-color: transparent;
     text-align: center;
+		color: var(--main-yellow-color);
   }
   #conversion-heading {
     width: 100%;
@@ -792,9 +798,11 @@ input[type="radio"] {
     margin: auto;
     margin-bottom: 10px;
     padding: 5px;
-    border-radius: 3px;
-    background-color: var(--main-yellow-color);
+		border: 2px solid var(--main-black-color);
+    border-radius: 4px;
+    background-color: var(--main-black-color);
     font-size: 1.7rem;
+		color: var(--main-yellow-color);
   }
   .input-option-input {
     width: 100%;
@@ -806,27 +814,27 @@ input[type="radio"] {
     width: 100%;
 		max-height: 200px;
     padding: 8px;
-    border: 0;
-    background-color: var(--main-yellow-color);
-    color: #333;
+    border: 2px solid var(--main-black-color);
+		border-radius: 4px;
+    background-color: transparent;
+    color: var(--main-black-color);
     font-size: 1.5rem;
     font-weight: bold;
     outline: none;
   }
-
   .input-option-input input {
     width: 100%;
     padding: 9px;
     border-radius: 4px;
-    border: 2px solid var(--main-yellow-color);
-    color: var(--main-yellow-color);
-    background-color: #333;
+    border: 2px solid var(--main-black-color);
+    color: var(--main-black-color);
+    background-color: transparent;
     font-size: 1.4rem;
+		font-weight: bold;
     outline: none;
   }
-	#unit-converter {
-		background-color: var(--main-yellow-color);
-		border-radius: 4px;
+	.input-option-input input::placeholder {
+		color: var(--main-black-color);
 	}
 /*--- Modal ---*/
 .modal {
@@ -912,8 +920,9 @@ button.accordion.active:after {
     transition: max-height 0.2s ease-out;
 }
 .modal-panel img {
+	display: block;
   width: 70%;
-  height: 50%;
+  height: 65%;
   margin: auto;
 }
 .modal-panel p {
@@ -1172,7 +1181,7 @@ button.accordion.active:after {
 		height: 178px;
 	}
   #practice-btns-container {
-		width: 95%;
+		width: 100%;
 	}
 	.practice-btn {
 		font-size: 1.4rem;
@@ -1184,7 +1193,8 @@ button.accordion.active:after {
     float: none;
     text-align: center;
   }
-  .pages-nav {
+  .pages-nav,
+	#bottom-pager {
     width: 85%;
 		text-align: center;
     float: none;
@@ -1211,12 +1221,12 @@ button.accordion.active:after {
 		margin-bottom: 10px;
 	}
 	.practice-btn {
-		width: 90%;
+		width: 100%;
 		margin: 0 auto 10px;
 		font-size: 1.7rem;
 	}
   #conversion-container {
-		width: 90%;
+		width: 100%;
 		margin: auto;
 	}
 }
@@ -1293,6 +1303,9 @@ button.accordion.active:after {
   .module-front,
 	.module-back {
 		font-size: 1.5rem;
+	}
+	.modal-panel img {
+		width: 100%;
 	}
 }
 @media screen and (max-width: 385px){
