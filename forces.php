@@ -24,8 +24,8 @@
 					<h2 class="animated bounceInDown section-heading">Forces</h2>
 					<div class="pages-nav animated bounceInDown">
 						<ul class="pager">
-							<li><a href="circularMotion.html" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: Circular Motion</a></li>
-							<li><a href="gravitationalForces.html" class="next-page-btn">Next: Gravitational Forces<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+							<li><a href="circularMotion.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: Circular Motion</a></li>
+							<li><a href="gravitationalForces.php" class="next-page-btn">Next: Gravitational Forces<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -416,8 +416,8 @@
 		<div class="row">
 			<div class="col-md-12" id="bottom-pager">
 				<ul class="pager">
-					<li><a href="circularMotion.html" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: Circular Motion</a></li>
-					<li><a href="gravitationalForces.html" class="next-page-btn">Next: Gravitational Forces<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+					<li><a href="circularMotion.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: Circular Motion</a></li>
+					<li><a href="gravitationalForces.php" class="next-page-btn">Next: Gravitational Forces<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 				</ul>
 			</div>
 		</div>
