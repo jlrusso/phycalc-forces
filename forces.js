@@ -218,9 +218,9 @@ window.onclick = function(e){
 		secondsBtn.checked = false;
 
 		function resetInputFields(){
-			netForceField.placeholder = "Net Force (Fnet)";
-			massField.placeholder = "Mass (m)";
-			accelerationField.placeholder = "Acceleration";
+			netForceField.placeholder = "net force (Fnet)";
+			massField.placeholder = "mass (m)";
+			accelerationField.placeholder = "acceleration";
 
 			for(let i = 0; i < inputFields.length; i++){
 				inputFields[i].value = "";
@@ -358,9 +358,9 @@ window.onclick = function(e){
 
 
 	function clearFunc(){
-		netForceField.placeholder = "Net Force (Fnet)";
-		massField.placeholder = "Mass (m)";
-		accelerationField.placeholder = "Acceleration (a)";
+		netForceField.placeholder = "net force (Fnet)";
+		massField.placeholder = "mass (m)";
+		accelerationField.placeholder = "acceleration (a)";
 
 		for(let i = 0; i < inputFields.length; i++){
 			inputFields[i].value = "";
