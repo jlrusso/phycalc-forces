@@ -435,7 +435,7 @@ window.onclick = function(e){
 
   /*--- Toggle Img Caption Show/Hide ---*/
   var imgCaptions = document.getElementsByClassName("img-caption");
-  var thirdPageImgs = document.querySelectorAll(".third-page-pics > input[type='image']");
+  var thirdPageImgs = document.querySelectorAll(".third-page-pics > img");
   thirdPageImgs.forEach(function(image){
     image.addEventListener("click", function(e){
       var imgCaption = this.nextElementSibling;
