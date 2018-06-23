@@ -243,7 +243,15 @@ window.onclick = function(e){
 			if(unitBtns[i].disabled){
 				unitBtns[i].disabled = false;
 			}
+      if(unitBtns[i].checked){
+        unitBtns[i].checked = false;
+      }
 		}
+    for(let i = 0; i < timeBtns.length; i++){
+      if(timeBtns[i].checked){
+        timeBtns[i].checked = false;
+      }
+    }
 		secondsBtn.checked = false;
 
 		function resetInputFields(){
