@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PhyCalc | Forces</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="description" content="Here, we cover the aspects of force, including Newton's laws and enable you to solve your own practice problems">
+	<title>IP | Forces</title>
+	<link rel="shortcut icon" href="/img/ip-logo.ico" type="image/ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -14,7 +16,7 @@
 <body>
 
 	<?php
-		include_once "navSearch.php";
+		include_once "nav-template.php";
 	?>
 
 	<section id="main-content">
@@ -58,19 +60,19 @@
 										<span class="badge">2</span>
 										<span><b>Units:&nbsp;</b></span>
 										<label class="radio-btn">
-										 	<input type="radio" class="unit-btn" units="ft" name="radio-two" id="newtons-radio-btn">
+										 	<input type="radio" class="unit-btn" units="N" name="radio-two" id="newtons-radio-btn">
 										    <span class="checkmark">newtons</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="unit-btn" units="m" name="radio-two" id="kilograms-radio-btn">
+										    <input type="radio" class="unit-btn" units="kg" name="radio-two" id="kilograms-radio-btn">
 										    <span class="checkmark">kilograms</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="unit-btn" units="mi" name="radio-two" id="grams-radio-btn">
+										    <input type="radio" class="unit-btn" units="g" name="radio-two" id="grams-radio-btn">
 										    <span class="checkmark">grams</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="unit-btn" units="km" name="radio-two" id="meters-radio-btn">
+										    <input type="radio" class="unit-btn" units="m" name="radio-two" id="meters-radio-btn">
 										    <span class="checkmark">meters</sup></span> |
 										</label>
 										<label class="radio-btn">
@@ -84,7 +86,7 @@
 										<span class="badge">3</span>
 										<span><b>Time:&nbsp;</b></span>
 										<label class="radio-btn">
-										 	<input type="radio" class="time-btn" units="ft" name="radio-two" id="seconds-radio-btn">
+										 	<input type="radio" class="time-btn" units="s" name="radio-two" id="seconds-radio-btn">
 										    <span class="checkmark">seconds</span> |
 										</label>
 										<label class="radio-btn">
@@ -92,11 +94,11 @@
 										    <span class="checkmark">minutes</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="time-btn" units="mi" name="radio-two" id="hours-radio-btn">
+										    <input type="radio" class="time-btn" units="hr" name="radio-two" id="hours-radio-btn">
 										    <span class="checkmark">hours</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="time-btn" units="km" name="radio-two" id="days-radio-btn">
+										    <input type="radio" class="time-btn" units="days" name="radio-two" id="days-radio-btn">
 										    <span class="checkmark">days</span>
 										</label>
 									</form>
@@ -128,9 +130,9 @@
 									</div>
 									<div id="outer-image-container">
 										<div id="inner-image-container">
-											<img src="../img/force-equation-one.png" class="img-responsive slide" alt="Force Equation 1"/>
-											<img src="../img/force-equation-two.png" class="img-responsive slide" alt="Force Equation 2"/>
-											<img src="../img/force-equation-three.png" class="img-responsive slide" alt="Force Equation 3"/>
+											<img src="../img/force-equation-one.PNG" class="img-responsive slide" alt="Force Equation 1"/>
+											<img src="../img/force-equation-two.PNG" class="img-responsive slide" alt="Force Equation 2"/>
+											<img src="../img/force-equation-three.PNG" class="img-responsive slide" alt="Force Equation 3"/>
 										</div>
 										<div id="slide-bar-indicators">
 											<div class="slide-bar"></div>
@@ -139,7 +141,7 @@
 										</div>
 									</div>
 									<div id="solo-image">
-										<img src="../img/force-solo-image.png" class="img-responsive" alt="Acceleration Graph"/>
+										<img src="../img/force-solo-image.PNG" class="img-responsive" alt="Acceleration Graph"/>
 									</div>
 								</div>
 							</div>
@@ -185,7 +187,7 @@
 								</div>
 							</div>
 							<div class="module-img">
-								<img src="../img/force-module-image.png" class="img-responsive" alt="Normal Force">
+								<img src="../img/force-module-image.PNG" class="img-responsive" alt="Normal Force">
 							</div>
 						</div>
 					</div>
@@ -224,9 +226,6 @@
 				include_once "conversion-calculator.php";
 			?>
 
-
-
-
 			<div class="modal fade example-modal" id="my-modal-one" role="dialog">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -242,10 +241,6 @@
 									</p>
 								</div>
 							</div>
-							<button class="accordion"><strong>Illustration</strong></button>
-							<div class="modal-panel">
-								<img src="img/forcesAccordionImg1.png" class="img-responsive"/>
-							</div>
 							<button class="accordion"><strong>Given Variables</strong></button>
 							<div class="modal-panel">
 								<p>
@@ -255,6 +250,10 @@
 										<li><b>Crate Acceleration :</b> 13.5 m / s<sup>2</sup></li>
 									</ul>
 								</p>
+							</div>
+							<button class="accordion"><strong>Illustration</strong></button>
+							<div class="modal-panel">
+								<img src="img/forcesAccordionImg1.PNG" class="img-responsive"/>
 							</div>
 							<button class="accordion last-accordion"><strong>Solution:</strong></button>
 							<div class="modal-panel">
@@ -290,10 +289,6 @@
 									Tom is pushing a box of unknown mass with a force of 50 Newtons on a frictionless surface. If the acceleration of the box is 2 m/s<sup>2</sup>, what is the mass of the box?
 									</p>
 								</div>
-								<button class="accordion"><strong>Illustration</strong></button>
-								<div class="modal-panel">
-									<img src="img/forcesAccordionImg2.png" class="img-responsive"/>
-								</div>
 								<button class="accordion"><strong>Given Variables</strong></button>
 								<div class="modal-panel">
 									<p>
@@ -304,6 +299,10 @@
 											<li><b>Given Acceleration:</b> 2 m/s<sup>2</sup></li>
 										</ul>
 									</p>
+								</div>
+								<button class="accordion"><strong>Illustration</strong></button>
+								<div class="modal-panel">
+									<img src="img/forcesAccordionImg2.PNG" class="img-responsive"/>
 								</div>
 								<button class="accordion last-accordion"><strong>Solution</strong></button>
 								<div class="modal-panel">
@@ -340,10 +339,6 @@
 										Two boxes are pushed along a frictionless horizontal surface. The first box has a mass of 90 kg and is being pushed with a force of 250 N. If the first box is in contact with a second box with a mass of 40 kg, what is the acceleration of both boxes?
 									</p>
 								</div>
-								<button class="accordion"><strong>Illustration</strong></button>
-								<div class="modal-panel">
-									<img src="img/forcesAccordionImg3.png" class="img-responsive"/>
-								</div>
 								<button class="accordion"><strong>Given Variables</strong></button>
 								<div class="modal-panel">
 									<p>
@@ -354,6 +349,10 @@
 											<li><b>Masses:</b> Box 1 mass = 90 kg, box 2 mass = 40 kg</li>
 										</ul>
 									</p>
+								</div>
+								<button class="accordion"><strong>Illustration</strong></button>
+								<div class="modal-panel">
+									<img src="img/forcesAccordionImg3.PNG" class="img-responsive"/>
 								</div>
 								<button class="accordion last-accordion"><strong>Solution</strong></button>
 								<div class="modal-panel">
