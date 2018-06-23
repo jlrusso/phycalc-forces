@@ -207,7 +207,7 @@ window.onclick = function(e){
 		hoursBtn = document.getElementById("hours-radio-btn"),
 		daysBtn = document.getElementById("days-radio-btn"),
 		chosenTimeUnit,
-		acclUnits = "/" + chosenTimeUnit + "2";
+		acclUnits;
 
 
 	var inputFields = document.getElementsByClassName("input-field"),
@@ -307,7 +307,6 @@ window.onclick = function(e){
 				}
 				metersBtn.disabled = false;
 				kilometersBtn.disabled = false;
-				secondsBtn.checked = true;
 			break;
 		}
 	}
@@ -325,17 +324,18 @@ window.onclick = function(e){
 	assignLengthUnit();
 
 
-
-	function assignTimeUnit(){
-		for(let i = 0; i < timeBtns.length; i++){
-			timeBtns[i].addEventListener("click", function(){
-				if(timeBtns[i].checked){
-					chosenTimeUnit = timeBtns[i].getAttribute("units");
-				}
-			})
-		}
+function assignTimeUnit(){
+  for(let i = 0; i < timeBtns.length; i++){
+		timeBtns[i].addEventListener("click", function(){
+			if(timeBtns[i].checked){
+				chosenTimeUnit = timeBtns[i].getAttribute("units");
+        acclUnits = "/" + chosenTimeUnit + "^2";
+			}
+		})
 	}
-	assignTimeUnit();
+}
+assignTimeUnit();
+
 
 
 	function calculateFunc(){
@@ -344,10 +344,10 @@ window.onclick = function(e){
 				function setTempForce(){
 					var tempForce = massField.value * accelerationField.value;
 					function setFinalForce(){
-						if(tempForce.toString().length > 9){
-							netForceField.value = tempForce.toPrecision(sigFigsField.value || 9) + " " + (chosenUnit || " ");
+						if(tempForce.toString().length > 5){
+							netForceField.value = tempForce.toPrecision(sigFigsField.value || 5) + " " + (chosenUnit || " ");
 						} else {
-							netForceField.value = tempForce.toPrecision(sigFigsField.value || tempForce.toString().length) + " " + (choseUnit || " ");
+							netForceField.value = tempForce.toPrecision(sigFigsField.value || tempForce.toString().length) + " " + (chosenUnit || " ");
 						}
 					}
 					setFinalForce();
@@ -358,8 +358,8 @@ window.onclick = function(e){
 				function setTempMass(){
 					var tempMass = netForceField.value / accelerationField.value;
 					function setFinalMass(){
-						if(tempMass.toString().length > 9){
-							massField.value = tempMass.toPrecision(sigFigsField.value || 9) + " " + (chosenUnit || " " ) + (chosenTimeUnit || " ");
+						if(tempMass.toString().length > 5){
+							massField.value = tempMass.toPrecision(sigFigsField.value || 5) + " " + (chosenUnit || " " );
 						} else {
 							massField.value = tempMass.toPrecision(sigFigsField.value || tempMass.toString().length) + " " + (chosenUnit || " " );
 						}
@@ -369,13 +369,14 @@ window.onclick = function(e){
 				setTempMass();
 			break;
 			case (solveAcceleration.checked):
+        console.log(acclUnits);
 				function setTempAcceleration(){
 					var tempAcceleration = netForceField.value / massField.value;
 					function setFinalAcceleration(){
-						if(tempAcceleration.toString().length > 9){
-							accelerationField.value = tempAcceleration.toPrecision(sigFigsField.value || 9) + " " + (chosenTimeUnit || " " ) + (acclUnits || " ");
+						if(tempAcceleration.toString().length > 5){
+							accelerationField.value = tempAcceleration.toPrecision(sigFigsField.value || 5) + " " + (chosenUnit || " " ) + (acclUnits || " ");
 						} else {
-							accelerationField.value = tempAcceleration.toPrecision(sigFigsField.value || tempAcceleration.toString().length) + " " + (chosenTimeUnit || " ") + (acclUnits || " ");
+							accelerationField.value = tempAcceleration.toPrecision(sigFigsField.value || tempAcceleration.toString().length) + " " + (chosenUnit || " ") + (acclUnits || " ");
 						}
 					}
 					setFinalAcceleration();
@@ -411,6 +412,9 @@ window.onclick = function(e){
 			if(unitBtns[i].checked){
 				unitBtns[i].checked = false;
 			}
+      if(unitBtns[i].disabled){
+        unitBtns[i].disabled = false;
+      }
 		}
 
 		for(let i = 0; i < timeBtns.length; i++){
